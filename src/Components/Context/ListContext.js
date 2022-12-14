@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useReducer, useState } from "react";
+import { createContext, useContext, useEffect, useReducer} from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -37,7 +37,7 @@ const ListConTextProvider = ({ children }) => {
 
     const storeDatacreated = () => {
 
-        if (state.listdatacont.title == "" && state.listdatacont.description == "") {
+        if (state.listdatacont.title === "" && state.listdatacont.description === "") {
         } else {
             getlocalstoredata();
             dispatch({ type: "STORE_DATA" })
@@ -67,7 +67,7 @@ const ListConTextProvider = ({ children }) => {
 
     useEffect(() => {
         getlocalstoredata()
-    }, [])
+    },[])
 
     useEffect(() => {
         localStorage.setItem("Token", JSON.stringify(state.storeListData))

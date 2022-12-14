@@ -1,5 +1,5 @@
 
-# To Do List
+# [To Do List](https://abhinavchavare-todolist.netlify.app)
 
 App use to do list of doing task to perform.
 
@@ -15,7 +15,6 @@ App use to do list of doing task to perform.
 - Fullscreen mode
 - Mobile responsive
 
-
 ## Build with
 - React Router v6
 - useReducer and useContext
@@ -26,9 +25,6 @@ App use to do list of doing task to perform.
 ## 🛠 Skills
  HTML, CSS,Javascript, React...
 
-
 ## Demo
-
-Insert gif or link to demo
 
 https://user-images.githubusercontent.com/120358263/207513697-e14c2d07-ff05-4b04-8019-dc5ee7d17a96.mp4

@@ -10,8 +10,6 @@ import {
 import Home from './Components/Home/Home';
 import SingleList from './Components/SingleList/SingleList';
 import Totallist from './Components/ToDoList/Totallist';
-import QuillEditor from './Components/QuillEditor';
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 

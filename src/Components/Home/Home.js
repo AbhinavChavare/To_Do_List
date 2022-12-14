@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className='cont-margin'>
     <div className='home-cont'>
-   <span className='home-img'><img src='../Images/todolist.webp' alt='TodoList Image'></img></span>
+   <span className='home-img'><img src='../Images/todolist.webp' alt='TodoList_Image'></img></span>
    <span className='text-cont'>
    <h3>To-do list</h3>
 <p><strong> It's a list of tasks you need to complete or things that you want to do.</strong></p> 
