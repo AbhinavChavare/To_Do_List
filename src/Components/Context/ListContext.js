@@ -10,7 +10,7 @@ const initialState = {
     listdatacont: {
         title: "",
         description: "",
-        id:""
+        id: ""
     },
     storeListData: []
 }
@@ -32,7 +32,7 @@ const ListConTextProvider = ({ children }) => {
     const getListTitle = (e) => {
         let fname = e.target.name
         let value = e.target.value
-        return dispatch({ type: "SET_DATA", payload: { fname, value} })
+        return dispatch({ type: "SET_DATA", payload: { fname, value } })
     }
 
     const storeDatacreated = () => {
@@ -42,42 +42,41 @@ const ListConTextProvider = ({ children }) => {
             getlocalstoredata();
             dispatch({ type: "STORE_DATA" })
             dispatch({ type: "RESET_TEXT" })
-           }
-    }
-  const  deletedList=(id)=>{
-      showToastMessage() 
-    //   alert("dfg")
-   return dispatch({type:"SET_REMOVE_LIST",payload:id})
-}
-
-const setboldtext=(id)=>{
-    dispatch({type:"SET_BOLD_TEXT",payload:id})
-}
-
- const   getlocalstoredata=()=>{
-    if(list){
-             let locatstoragedatapull = JSON.parse(localStorage.getItem("Token"))
-             dispatch({type:"GET_LOCALSTR_DATA",payload:locatstoragedatapull})
-            }
-            else{
-
-                dispatch({type:"GET_LOCALSTR_DATA",payload:[]})
-            }
+        }
     }
     
-    useEffect(()=>{
+    const deletedList = (id) => {
+        showToastMessage()
+        return dispatch({ type: "SET_REMOVE_LIST", payload: id })
+    }
+
+    const setboldtext = (id) => {
+        dispatch({ type: "SET_BOLD_TEXT", payload: id })
+    }
+
+    const getlocalstoredata = () => {
+        if (list) {
+            let locatstoragedatapull = JSON.parse(localStorage.getItem("Token"))
+            dispatch({ type: "GET_LOCALSTR_DATA", payload: locatstoragedatapull })
+        }
+        else {
+
+            dispatch({ type: "GET_LOCALSTR_DATA", payload: [] })
+        }
+    }
+
+    useEffect(() => {
         getlocalstoredata()
-    },[])
+    }, [])
 
     useEffect(() => {
         localStorage.setItem("Token", JSON.stringify(state.storeListData))
     }, [state])
 
     return (
-        <ListContext.Provider value={{ storeDatacreated, getListTitle, ...state, ...state.listdatacont,deletedList,setboldtext}}>
+        <ListContext.Provider value={{ storeDatacreated, getListTitle, ...state, ...state.listdatacont, deletedList, setboldtext }}>
             {children}
         </ListContext.Provider>
-
     )
 }
 

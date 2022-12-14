@@ -1,33 +1,11 @@
 import React, { useState } from 'react'
 import "./Totallist.css"
-// import { FaBold } from "react-icons/fa";
-// import { FiUnderline } from "react-icons/fi";
-// import { BiEdit } from "react-icons/bi";
 import { useListContext } from '../Context/ListContext';
-// import { useNavigate } from "react-router-dom";
-// import QuillEditor from '../QuillEditor';
-import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer} from 'react-toastify';
 
-const Totallist = () => {
-    //     // const navigate = useNavigate();
-       
+const Totallist = () => {     
 
     const { storeDatacreated, getListTitle, storeListData, title, description, deletedList } = useListContext()
-
-    // const [editText, setEditText] = useState(false)
-    // const [editTextid, setEditTextId] = useState(null)
-
-    // let viewlistcont = (id) => {
-    //     {/* showToastMessage(tit,des)    */ }
-    //     storeListData.find((curele) => {
-    //         if (curele.id == id) {
-    //             setEditText(true)
-    //             setEditTextId(id)
-    //         }
-    //     })
-    // }
-
 
     return (
         <div className='tolist-center'>
@@ -41,35 +19,6 @@ const Totallist = () => {
                             }) : null
 
                     }
-                            {/* onClick={() => { viewlistcont(curelem.id) }} */}
-
-                    {/* {(editText) ?
-
-                        
-                            (storeListData) ?
-                                storeListData.map((curelem) => {
-                                  if(curelem.id===editTextid){
-                                    return (
-                                        <div key={curelem.id}  className='edit-position'>
-                                        <div className='totallistcont list-col'>
-                                        <div className='title-data'>
-                                <h5 className='flex-center'>Title</h5>
-                                <input className='descrip-cont' value={title} type="text" placeholder='Enter list title' name="title" onChange={(e) => getListTitle(e)} />
-                            </div>
-                                                                                      <div className='des-text'>
-                                                {curelem.description}
-                                            </div>
-                                            <button onClick={() => storeDatacreated()} >Create list</button>
-                                            <button className='rem-list' onClick={() =>  setEditText(false)} >Rem</button>
-
-                                        </div>
-                                        </div>
-                                    )
-                                  }
-                                })                           
-                                :null
-                        : null
-                    } */}
 
                 </div>
                 <div className='sec-cont'>
@@ -96,17 +45,8 @@ const Totallist = () => {
                         {
                             (storeListData) ?
                                 storeListData.map((curelem) => {
-                                    {/* console.log(curelem.title)  */ }
                                     return (
                                         <div key={curelem.id} className='totallistcont list-col'>
-                                            {/* <div className='style-cont'>
-                                                <h5>Text Styles:</h5>
-                                                <div className='text-style'>
-                                                    <h5 onClick={()=>{setboldtext(curelem.id)}}><FaBold /></h5>
-                                                    <h5><FiUnderline /></h5>
-                                                    <h5><BiEdit /></h5>
-                                                </div>
-                                            </div> */}
                                             <div className='tit-text'>
                                                 {curelem.title}
                                             </div>

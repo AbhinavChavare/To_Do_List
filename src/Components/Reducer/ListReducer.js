@@ -39,9 +39,6 @@ console.log(updatesdatarem)
     return{
       ...state,storeListData:[...action.payload]
     }
-
-
-
 }
   return (
    state

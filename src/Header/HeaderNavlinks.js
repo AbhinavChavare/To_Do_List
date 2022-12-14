@@ -19,7 +19,6 @@ const HeaderNavlinks = () => {
       setTheme("light-theme")
       // alert(theme)
       // document.body.className = theme;
-
     }
   }
   useEffect((e) => {

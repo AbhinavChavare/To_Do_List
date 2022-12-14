@@ -5,7 +5,7 @@ import "./Header.css"
 const HeaderCont = () => {
   return (
     <div className='header-cont'>
-      <h1>A.B.C</h1>
+      <h1 className='header-title'>A.B.C</h1>
       <HeaderNavlinks/>
     </div>
   )

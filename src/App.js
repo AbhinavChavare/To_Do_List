@@ -30,8 +30,7 @@ function App() {
      </Routes>
 <Routes>
      <Route path="/totallist" element={<Totallist/>}></Route>
-     </Routes>
-     
+     </Routes> 
      <Footer/>
      </Router>
    

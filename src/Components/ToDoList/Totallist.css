@@ -150,3 +150,17 @@ display: flex;
     word-break: break-all;
 }
 
+@media (max-width:380px){
+
+    .first-cont{
+        display: none;
+    }
+    .totallistcont{
+        width:80vw;
+margin-left: .5rem;
+    }
+    .descrip-cont{
+width: 60vw;
+    }
+
+}
